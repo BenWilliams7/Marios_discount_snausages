@@ -1,0 +1,10 @@
+
+<%= form_for @project do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <%= f.label :origin %>
+  <%= f.text_field :origin %>
+  <%= f.submit %>
+<% end %>
