@@ -5,5 +5,3 @@ Project.destroy_all
                   price: Faker::Number.between(3, 374),
                   origin: Faker::GameOfThrones.city)
 end
-
-p "Created #{Project.name} projects"

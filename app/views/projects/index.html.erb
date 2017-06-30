@@ -1,12 +1,18 @@
-<h1>Projects</h1>
+<h1>Welcome to Mario's Discount Snausages Projects!</h1>
 
+<h3>The finest in snausage project technology</h3>
+
+Newest Snausage:
+<br>
+All Snausages:
 <ul>
   <% @projects.each do |project| %>
   <li><%= link_to project.name, project_path(project) %> -
-      <%= link_to project.price, project_path(project) %> -
+      $<%= link_to project.price, project_path(project) %> -
       <%= link_to project.origin, project_path(project) %></li>
   <% end %>
 </ul>
+
 
 
 <%= link_to "New Project", new_project_path %>

@@ -40,6 +40,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers'
+  gem 'capybara'
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
