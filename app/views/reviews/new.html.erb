@@ -1,6 +1,6 @@
 <h1>New review for <%= @project.name %></h1>
 
-<%= render('layouts/errors', :object => @project) %>
+<%= render('layouts/errors', :object => @review) %>
 
 <%= form_for [@project, @review] do |f| %>
   <%= f.label :author %>
