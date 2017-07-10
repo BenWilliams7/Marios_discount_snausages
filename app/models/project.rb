@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+
   scope :three, -> { order(created_at: :desc).limit(3)}
 
   scope :volantis, -> { where(origin: "Volantis") }
@@ -13,5 +14,5 @@ class Project < ActiveRecord::Base
 
   has_many :reviews
 
-  validates :name, :cost, :origin, :presence => true
+  validates :name, :price, :origin, :presence => true
 end
