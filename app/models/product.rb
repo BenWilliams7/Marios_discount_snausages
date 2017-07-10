@@ -1,13 +1,13 @@
-class Project < ActiveRecord::Base
+class Product < ActiveRecord::Base
 
   scope :three, -> { order(created_at: :desc).limit(3)}
 
   scope :volantis, -> { where(origin: "Volantis") }
 
   scope :most_reviews, -> {(
-    select("projects.id, projects.name, projects.origin, count(reviews.id) as reviews_count")
+    select("products.id, products.name, products.origin, count(reviews.id) as reviews_count")
     .joins(:reviews)
-    .group("projects.id")
+    .group("products.id")
     .order("reviews_count DESC")
     .limit(1)
     )}

@@ -1,15 +1,15 @@
 class ReviewsController < ApplicationController
 
   def new
-    @project = Project.find(params[:project_id])
-    @review = @project.reviews.new
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new
   end
 
   def create
-    @project = Project.find(params[:project_id])
-    @review = @project.reviews.new(review_params)
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new(review_params)
     if @review.save
-      redirect_to project_path(@review.project)
+      redirect_to product_path(@review.product)
     else
       render :new
     end

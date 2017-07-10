@@ -1,10 +1,10 @@
-<h1><%= @project.name %></h1>
+<h1><%= @product.name %></h1>
 
-<% if @project.reviews.any? %>
-  <h4>Here are the reviews for this project:</h4>
+<% if @product.reviews.any? %>
+  <h4>Here are the reviews for this product:</h4>
 
   <ul>
-    <% @project.reviews.each do |review| %>
+    <% @product.reviews.each do |review| %>
       <li>
         <p>Review: <%= review.content_body %></p>
         <p>Author: <%= review.author %></p>
@@ -16,10 +16,10 @@
   <p>There are no reviews yet!</p>
 <% end %>
 
-<p><%= link_to "Add a review", new_project_review_path(@project) %></p>
+<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
 
-<p><%= link_to "Delete Project", project_path(@project),
+<p><%= link_to "Delete Product", product_path(@product),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p>
 
-<p><%= link_to "Return to projects", projects_path %></p>
+<p><%= link_to "Return to products", products_path %></p>

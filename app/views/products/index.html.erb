@@ -1,0 +1,34 @@
+<h1>Welcome to Mario's Discount Snausages Products!</h1>
+
+<h3>The finest in snausage product technology</h3>
+
+<h3>Lastest Additions:</h3>
+<% @features.each do |feature| %>
+  <h4><%= feature.name %></h4>
+<% end %>
+<br>
+
+<h3>The Snausage with the most reviews:</h3>
+<% @most_reviews.each do |products| %>
+  <h4><%= products.name %></h4>
+<% end %>
+<br>
+
+<h3>And these fine snausages were made right here in Volantis:</h3>
+<% @location.each do |products| %>
+  <h4><%= products.name %></h4>
+<% end %>
+<br>
+
+All Snausages:
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %> -
+      $<%= link_to product.price, product_path(product) %> -
+      <%= link_to product.origin, product_path(product) %></li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to "New Product", new_product_path %>
