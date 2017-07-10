@@ -6,7 +6,11 @@
 <% @features.each do |feature| %>
   <h4><%= feature.name %></h4>
 <% end %>
-Newest Snausage:
+<br>
+<h3>Product with the most reviews:</h3>
+<% @most_reviews.each do |projects| %>
+  <h4><%= projects.name %></h4>
+<% end %>
 <br>
 All Snausages:
 <ul>

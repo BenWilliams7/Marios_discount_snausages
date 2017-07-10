@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
     @features = Project.three
+    @location = Project.volantis
+    @most_reviews = Project.most_reviews
   end
 
   def show
