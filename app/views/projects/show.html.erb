@@ -6,10 +6,9 @@
   <ul>
     <% @project.reviews.each do |review| %>
       <li>
-        <%= review.author %>
-        <%= review.content_body %>
-        <%= review.rating %>
-
+        <p>Review: <%= review.content_body %></p>
+        <p>Author: <%= review.author %></p>
+        <p>Rating: <%= review.rating %></p>
       </li>
     <% end %>
   </ul>
